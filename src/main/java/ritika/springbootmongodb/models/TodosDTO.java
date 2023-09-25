@@ -21,7 +21,7 @@ public class TodosDTO {
     private String id;
     private String todo;
     private String description;
-    private Boolean ompleted;
+    private Boolean completed;
     private Date createdAt;
     private Date updatedAt; 
 }
