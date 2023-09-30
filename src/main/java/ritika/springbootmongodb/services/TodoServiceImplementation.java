@@ -20,9 +20,12 @@ public class TodoServiceImplementation implements TodoService {
     @Override
     public void createTodo(TodosDTO todo) throws ConstraintViolationException, TodoCollectionException {
         Optional<TodosDTO> todoOptional=todoRepo.findByTodo(todo.getTodo());
+        System.out.println("todo"+todoOptional);
         if(todoOptional.isPresent()) {
+            System.out.println("if"+todoOptional);
             throw new TodoCollectionException(TodoCollectionException.TodoAlreadyExists());
         } else {
+            System.out.println("el"+todoOptional);
             todo.setCreatedAt(new Date(System.currentTimeMillis()));
             todoRepo.save(todo);
         }

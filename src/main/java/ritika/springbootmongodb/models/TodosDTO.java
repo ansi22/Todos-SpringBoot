@@ -18,7 +18,9 @@ import lombok.Setter;
 @Document(collection="todos")
 
 public class TodosDTO {
-    @Id 
+
+    
+    @Id
     private String id;
 
     @NotNull(message = "todo cannot be null")
@@ -31,6 +33,6 @@ public class TodosDTO {
     private Boolean completed;
     
     private Date createdAt;
-    
-    private Date updatedAt; 
+
+    private Date updatedAt;
 }
